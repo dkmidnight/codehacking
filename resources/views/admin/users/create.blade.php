@@ -4,6 +4,8 @@
 
 @section('content')
 
+	<h1>Create Users</h1>
+
 @include('includes.form_error')
 
 	{!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
