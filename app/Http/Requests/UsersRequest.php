@@ -23,14 +23,16 @@ class UsersRequest extends Request
      */
     public function rules()
     {
+        
+        
         return [
             //
             'name'=>'required',
-            'email'=>'required',
+            'email'=>'required|email|unique:users',
             'role_id'=>'required',
             'is_active'=>'required',
             'password'=>'required',
-            // 'con_pass'=>'required'
+            'confirm_password'=>'required|same:password'
         ];
     }
 }

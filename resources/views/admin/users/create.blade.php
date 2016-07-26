@@ -4,6 +4,7 @@
 
 @section('content')
 
+@include('includes.form_error')
 
 	{!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
 
@@ -40,8 +41,8 @@
 
 	<div class="form-group">
 		
-		{!! Form::label('file', 'Pekture:') !!}
-		{!! Form::file('file', null, ['class'=>'form-control']) !!}
+		{!! Form::label('photo_id', 'Photo:') !!}
+		{!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
 
 	</div>
 
@@ -54,8 +55,8 @@
 
 	<div class="form-group">
 		
-		{!! Form::label('con_pass', 'Confirm Password:') !!}
-		{!! Form::password('con_pass', ['class'=>'form-control']) !!}
+		{!! Form::label('confirm_password', 'Confirm Password:') !!}
+		{!! Form::password('confirm_password', ['class'=>'form-control']) !!}
 
 	</div>
 
@@ -71,7 +72,7 @@
 	{!! Form::close() !!}
 
 
-@include('includes.form_error')
+
 
 
 
